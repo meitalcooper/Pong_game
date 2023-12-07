@@ -19,4 +19,3 @@ class Paddle(Turtle):
         new_y = self.ycor() - 20
         self.goto(x=self.xcor(), y= new_y)
         
-

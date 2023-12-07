@@ -19,7 +19,7 @@ class Ball(Turtle):
         self.goto(new_x, new_y)
 
     def bounce_y(self):
-        """Invert the y-axis movement direction."""
+       """Invert the y-axis movement direction."""
        self.y_move *= -1
        
     
@@ -36,5 +36,3 @@ class Ball(Turtle):
 
        
        
-
-

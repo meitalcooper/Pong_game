@@ -21,7 +21,7 @@ class Scoreboard(Turtle):
 
     
     def l_point(self):
-        """Increment the score for the left player and update the scoreboard.""
+        """Increment the score for the left player and update the scoreboard."""
         self.l_score += 1
         self.update_score()
        
@@ -31,4 +31,3 @@ class Scoreboard(Turtle):
         self.r_score += 1
         self.update_score()
         
-

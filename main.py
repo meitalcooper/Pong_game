@@ -6,7 +6,7 @@ from scoreboard import Scoreboard
 
 screen = Screen()
 screen.setup(width=800, height=600)
-difficulty_level_selected = screen.textinput(title= "Select difficulty", prompt=" Easy \n Medium \n Hared ").lower()
+difficulty_level_selected = screen.textinput(title= "Select difficulty", prompt=" Normal \n Hard \n Expert ").lower()
 start_the_game  =  screen.textinput(title= "Player Controls:", prompt=" Right Player: Use the 'Up Arrow' key to move up and the 'Down Arrow' key to move down. \n Left Player: Use the 'W' key to move up and the 'S' key to move down. \n press 's' to start ").lower()
 screen.bgcolor("black")
 screen.title("Pong")
@@ -26,14 +26,14 @@ screen.onkey(l_paddle.go_down, "s")
 if difficulty_level_selected and start_the_game == 's':
     game_is_on = True
 while game_is_on:
-    if difficulty_level_selected == "easy":
-        time.sleep(0.5)    #ball speed: 0.5  
-    elif difficulty_level_selected == "medium":  #ball speed: 0.1
-        time.sleep(0.1)
-    elif difficulty_level_selected == "hard":    #ball speed: 0.05
-        time.sleep(0.05) 
+    if difficulty_level_selected == "normal":
+        time.sleep(0.1)    #ball speed: 0.1 
+    elif difficulty_level_selected == "hard":  #ball speed: 0.05
+        time.sleep(0.05)
+    elif difficulty_level_selected == "expert":    #ball speed: 0.03
+        time.sleep(0.03) 
     else:
-        time.sleep(0.5) # default level is easy
+        time.sleep(0.5) # default level is normal
 
     screen.update()
     ball.move()
